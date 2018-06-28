@@ -63,9 +63,11 @@ filePaths.forEach(filePath => {
   while (match = rx.exec(content)) {
     if (match != null) {
       console.log(`found on ${filePath}`);
+
       const routes = match[1].replace(/\/\/.*/g, '').trim();
       
       let ngPaths = findNgPaths(routes);
+
       if (ngPaths.length === 0) {
         /**
          * Check if it is a variable name
@@ -95,7 +97,7 @@ filePaths.forEach(filePath => {
         console.log('Found inline paths');
       }
 
-      rootPaths = [...ngPaths];
+      rootPaths = rootPaths.concat(ngPaths);
 
     }
   }
