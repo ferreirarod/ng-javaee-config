@@ -24,7 +24,7 @@ Tool for generating a war bundle of an agular-cli application
 
 ## How to install?
 
-  npm i --g ng-javaee-config
+  npm i --g @ferreirarod/ng-javaee-config
 
 ## How to run?
 
