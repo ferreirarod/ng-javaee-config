@@ -103,8 +103,8 @@ filePaths.forEach(filePath => {
   }
 });
 
-const ngCli = require(`${appPath}/.angular-cli.json`);
-const outFolder = path.join(appPath, ngCli.apps[0].outDir);
+const ngCli = require(`${appPath}/angular.json`);
+const outFolder = path.join(appPath, ngCli.projects[0].architect.build.options.outputPath);
 const webInfAppFolder = outFolder + '/WEB-INF';
 const webInfTool = `${__dirname}/WEB-INF`;
 
