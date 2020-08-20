@@ -1,6 +1,6 @@
 {
   "name": "@ferreirarod/ng-javaee-config",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Angular JavaEE Configurator",
   "main": "index.js",
   "scripts": {
