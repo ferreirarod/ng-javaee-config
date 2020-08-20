@@ -123,7 +123,7 @@ if (rootPaths != null && rootPaths.length !== 0) {
   }
   const rules = xmlWriter.urlRules(rootPaths);
   fs.writeFileSync(`${webInfAppFolder}/urlrewrite.xml`, rules);
-  const output = fs.createWriteStream(path.basename(appPath) + '.war');
+  const output = fs.createWriteStream(projectKeys[0] + '.war');
   const archive = archiver('zip');
   output.on('close', () => {
     console.log(archive.pointer() + ' total bytes');
